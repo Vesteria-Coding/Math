@@ -2,12 +2,10 @@
 #include <iostream>
 
 bool flip(bool input) {
-    if (input == true) {
+    if (input) {
         return false;
-    } else if (input == false) {
-        return true;
     } else {
-        return "Error";
+        return true;
     }
 }
 
@@ -18,7 +16,7 @@ int main() {
     while (true) {
         if (count >= 4294967294) { // Highest possible value that can be stored in long
             break;
-        } else if (is_sub == true) {
+        } else if (is_sub) {
             is_sub = flip(is_sub);
             pi_approx = pi_approx - 4.0 / count;
         } else {
